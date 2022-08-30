@@ -23,7 +23,7 @@ class CardScreen extends StatelessWidget {
                     ),
                     title: Text('Card'),
                     subtitle: Text(
-                        'Ad non eiusmod nulla id. Veniam ut adipisicing ex sint. Sint est dolore ullamco culpa officia esse fugiat proident in minim in incididunt ad. Ex laborum quis nulla minim excepteur veniam aute esse. Nulla irure qui duis officia do fugiat enim mollit deserunt laborum tempor elit aliqua.'),
+                        'Proident ea officia duis non irure reprehenderit quis.'),
                   )
                 ],
               ),
