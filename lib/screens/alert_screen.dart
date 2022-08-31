@@ -38,28 +38,29 @@ class AlertScreen extends StatelessWidget {
 
   void displayDialogIOS(BuildContext context) {
     showCupertinoDialog(
-        barrierDismissible: false,
-        context: context,
-        builder: (context) {
-          return CupertinoAlertDialog(
-            title: const Text('Título'),
-            content: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: const [
-                Text('Este es el contenido de la alerta'),
-                SizedBox(height: 10),
-                FlutterLogo(
-                  size: 80,
-                )
-              ],
-            ),
-            actions: [
-              TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text('Cerrar'))
+      barrierDismissible: false,
+      context: context,
+      builder: (context) {
+        return CupertinoAlertDialog(
+          title: const Text('Título'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: const [
+              Text('Este es el contenido de la alerta'),
+              SizedBox(height: 10),
+              FlutterLogo(
+                size: 80,
+              )
             ],
-          );
-        });
+          ),
+          actions: [
+            TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Cerrar'))
+          ],
+        );
+      },
+    );
   }
 
   @override

@@ -12,23 +12,24 @@ class ListView2Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Center(child: Text('Listview')),
-        ),
-        body: ListView.separated(
-            itemBuilder: (context, i) => ListTile(
-                  title: Text(options[i]),
-                  trailing: const Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: Colors.deepOrangeAccent,
-                  ),
-                  onTap: () {
-                    final game = options[i];
-                    // ignore: avoid_print
-                    print(game);
-                  },
+      appBar: AppBar(
+        title: const Center(child: Text('Listview')),
+      ),
+      body: ListView.separated(
+          itemBuilder: (context, i) => ListTile(
+                title: Text(options[i]),
+                trailing: const Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  color: Colors.deepOrangeAccent,
                 ),
-            separatorBuilder: (_, __) => const Divider(),
-            itemCount: options.length));
+                onTap: () {
+                  final game = options[i];
+                  // ignore: avoid_print
+                  print(game);
+                },
+              ),
+          separatorBuilder: (_, __) => const Divider(),
+          itemCount: options.length),
+    );
   }
 }
