@@ -1,5 +1,6 @@
-import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/widgets.dart';
 
 class CardScreen extends StatelessWidget {
   const CardScreen({Key? key}) : super(key: key);
@@ -12,22 +13,28 @@ class CardScreen extends StatelessWidget {
         ),
         body: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          children: [
-            Card(
-              child: Column(
-                children: const [
-                  ListTile(
-                    leading: Icon(
-                      Icons.photo_album_outlined,
-                      color: AppTheme.primary,
-                    ),
-                    title: Text('Card'),
-                    subtitle: Text(
-                        'Proident ea officia duis non irure reprehenderit quis.'),
-                  )
-                ],
-              ),
-            )
+          children: const [
+            CustomCardType1(),
+            SizedBox(
+              height: 10,
+            ),
+            CustomCardType2(
+                name: 'Paisaje',
+                imageUrl:
+                    'https://chiledescentralizado.cl/wp-content/uploads/2016/03/landscape-04.jpg'),
+            SizedBox(
+              height: 10,
+            ),
+            CustomCardType2(
+                name: 'Paisaje con pinos',
+                imageUrl:
+                    'https://astelus.com/wp-content/viajes/Lago-Moraine-Parque-Nacional-Banff-Alberta-Canada.jpg'),
+            CustomCardType2(
+                imageUrl:
+                    'https://chiledescentralizado.cl/wp-content/uploads/2016/03/landscape-04.jpg'),
+            SizedBox(
+              height: 10,
+            ),
           ],
         ));
   }

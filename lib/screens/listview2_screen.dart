@@ -24,6 +24,7 @@ class ListView2Screen extends StatelessWidget {
                   ),
                   onTap: () {
                     final game = options[i];
+                    // ignore: avoid_print
                     print(game);
                   },
                 ),
